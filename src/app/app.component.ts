@@ -6,5 +6,12 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "CodeSandbox";
+  toggle: boolean = false;
+  logs = [];
+  getToggle() {
+    this.toggle = !this.toggle;
+    console.log(this.toggle);
+    this.logs.push(this.logs.length + 1);
+    console.log(this.logs);
+  }
 }
